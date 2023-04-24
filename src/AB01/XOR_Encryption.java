@@ -1,6 +1,10 @@
 package AB01;
 
-import java.io.*;
+import java.io.BufferedWriter;
+import java.io.File;
+import java.io.FileWriter;
+import java.io.IOException;
+import java.nio.charset.StandardCharsets;
 import java.util.Scanner;
 
 public class XOR_Encryption {
@@ -21,23 +25,27 @@ public class XOR_Encryption {
         // Dateiverzeichnispfad zur Erstellung der neuen verschlüsselten Datei.
         String outputPath = "src/AB01/encryption.txt";
         // Versuche Datei zum Auslesen zu öffnen
-        try (Scanner scanner = new Scanner(new File(inputPath), "UTF-8") {
+        try (Scanner scanner = new Scanner(new File(inputPath), StandardCharsets.UTF_8)) {
             // Writer für Verschlüsselte Zeile zu Speichern
-            BufferedWriter myWriter = new BufferedWriter(new FileWriter(inputPath, false));
+            BufferedWriter myWriter = new BufferedWriter(new FileWriter(outputPath, false));
 
             // Solange es noch Zeilen gibt, lies diese aus.
             int counter = 0;
-            while(scanner.hasNextLine())
-            {
+            while (scanner.hasNextLine()) {
                 String line = scanner.nextLine();
                 System.out.println("Zeile " + counter + ": " + line);
                 counter++;
+
+                String encrypted = encrypt(line, 5);
+                System.out.println(encrypted);
+
+                myWriter.write(encrypted + "\n");
             }
             // schliesse die zu lesende Datei
-                    scanner.close();
+            scanner.close();
             // schliesse die zu verschlüsselnde Datei
-            ...
-        } catch(IOException eIO) {
+            myWriter.close();
+        } catch (IOException eIO) {
             System.out.println("Folgender Fehler trat auf: " + eIO);
         }
     }
