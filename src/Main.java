@@ -4,6 +4,13 @@ import java.util.Scanner;
 
 public class Main {
     public static void main(String[] args) {
+        System.out.println("Arguments:");
+        for (String argument : args) {
+            System.out.println(argument);
+        }
+        System.out.println("---------");
+
+
         int inputNumber;
         Scanner scanner = new Scanner(System.in);  // Create a Scanner object
         System.out.println("Please enter an integer that is greater than 1: ");

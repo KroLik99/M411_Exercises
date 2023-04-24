@@ -20,10 +20,15 @@ public class XOR_Encryption {
     }
 
     public static void main(String[] args) throws IOException {
+        //Parameterübergabe bei Programmaufruf in der Kommandozeile
+        System.out.println("");
+
+        int key = Integer.parseInt(args[0]);
+
         // Dateiverzeichnispfad zur auszulesenden Datei.
-        String inputPath = "src/AB01/gedicht.txt";
+        String inputPath = args[1];
         // Dateiverzeichnispfad zur Erstellung der neuen verschlüsselten Datei.
-        String outputPath = "src/AB01/encryption.txt";
+        String outputPath = args[2];
         // Versuche Datei zum Auslesen zu öffnen
         try (Scanner scanner = new Scanner(new File(inputPath), StandardCharsets.UTF_8)) {
             // Writer für Verschlüsselte Zeile zu Speichern
@@ -32,13 +37,15 @@ public class XOR_Encryption {
             // Solange es noch Zeilen gibt, lies diese aus.
             int counter = 0;
             while (scanner.hasNextLine()) {
+                //scan the next line of gedicht
                 String line = scanner.nextLine();
+                //output the nextLine
                 System.out.println("Zeile " + counter + ": " + line);
                 counter++;
-
-                String encrypted = encrypt(line, 5);
+                //take a line from the gedicht.txt and give the key
+                String encrypted = encrypt(line, key);
                 System.out.println(encrypted);
-
+                //write to encryption
                 myWriter.write(encrypted + "\n");
             }
             // schliesse die zu lesende Datei
