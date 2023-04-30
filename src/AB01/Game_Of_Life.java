@@ -43,8 +43,8 @@ public class Game_Of_Life {
      */
     public static boolean[][] wendeRegelnAn(boolean[][] welt) {
         boolean[][] neueWelt = new boolean[DIM1][DIM2];
-        for (int i = 1; i < welt.length - 1; i++) {
-            for (int j = 1; j < welt[i].length; j++) {
+        for (int i = 1; i < 11; i++) {
+            for (int j = 1; j < 11; j++) {
                 int nachbarn = anzNachbarn(welt, i, j);
                 if (welt[i][j]) { // lebendig
                     if (nachbarn < 2) {
