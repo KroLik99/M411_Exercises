@@ -55,6 +55,13 @@ public class XOR_Encryption {
         } catch (IOException eIO) {
             System.out.println("Folgender Fehler trat auf: " + eIO);
         }
+        //XOR
+        /*
+        System.out.println("Arguments:");
+        for (String argument : args) {
+            System.out.println(argument);
+        }
+        System.out.println("---------");*/
     }
 }
 

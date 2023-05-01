@@ -75,7 +75,14 @@ public class Game_Of_Life {
         if (welt[x][y]) ret -= 1;
         return ret;
     }
-
+/*   boolean[][] welt = initWelt();
+        System.out.println("Startkonstellation");
+        zeigeWelt(welt);
+        for (int i = 1; i <= 100; i++) {
+            welt = wendeRegelnAn(welt);
+            System.out.println("Generation " + i);
+            zeigeWelt(welt);
+        }*/
 }
 
 

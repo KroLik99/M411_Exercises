@@ -79,6 +79,41 @@ System.out.println("Elapsed time: "
 + time1 + " milliseconds");
 } }
 
+
+
+
+        int n = Integer.parseInt(args[0]);
+// sum of square roots of integers from 1 to n using Math.sqrt(x).
+        Zeitmessung timer1 = new Zeitmessung();
+        double sum1 = 0.0;
+        for (int i = 1; i <= n; i++) {
+            sum1 += Math.sqrt(i); } double time1 = timer1.elapsedTime();
+        StdOut.printf("%e (%.2f seconds)\n", sum1, time1);
+// sum of square roots of integers from 1 to n using Math.pow(x, 0.5).
+        Zeitmessung timer2 = new Zeitmessung();
+        double sum2 = 0.0;
+        for (int i = 1; i <= n; i++) {
+            sum2 += Math.pow(i, 0.5); }
+        double time2 = timer2.elapsedTime();
+        StdOut.printf("%e (%.2f seconds)\n", sum2, time2);
+    }
+    public class InsertionSortTimer {
+        public static void main(String[] args)
+        {
+            /*Scanner in = new Scanner(System.in);
+            System.out.print("Enter array size: ");
+            int n = in.nextInt();
+            // Construct random array
+            int[] a = ArrayUtil.randomIntArray(n, 100);
+            // Use stopwatch to time selection sort
+            Zeitmessung timer1 = new Zeitmessung();
+            sorter.sort();
+            double time1 = timer1.elapsedTime();
+            System.out.println("Elapsed time: "
+                    + time1 + " milliseconds");*/
+/*
+}
+
         */
     public void insertionSort(int[] A, int l, int r) {
         for (int i = l; i <= r; i++)
