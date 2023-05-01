@@ -30,5 +30,16 @@ public class InsertionSort {
         System.out.println(b);}
     }
 
-
+//MAIN
+/*
+int[] liste = new int[10];
+        for(int i = 0; i<liste.length; i++){
+        liste[i] = (int) (Math.random()*10);
+    }
+        for(int b : liste){
+        System.out.println("b: " + b);
+    };
+    InsertionSort i = new InsertionSort();
+        i.insertionsort(liste);
+} */
 }
