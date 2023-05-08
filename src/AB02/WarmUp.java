@@ -35,4 +35,12 @@ public class WarmUp {
         }
         return false;
     }
+
+    /*public static void main(String[] args) {
+        int[] array = new int[]{
+                1,2,6,4,2
+        };
+        WarmUp w = new WarmUp();
+        System.out.println(w.checkOdd(array));
+    }*/
 }
