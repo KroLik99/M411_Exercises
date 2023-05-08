@@ -21,4 +21,18 @@ public class WarmUp {
         }
         return isOdd;
     }
+
+    public boolean checkOddSimpler(int[] array) {
+        int count = 0;
+        for (int element : array) {
+            if(element%2==1){
+                count++;
+
+                if(count>=2){
+                    return true;
+                }
+            }
+        }
+        return false;
+    }
 }
