@@ -2,29 +2,18 @@ import AB02.InsertionSort;
 import AB02.WarmUp;
 import AB02.Zeitmessung;
 import AB02.*;
+import AB03.Fibonacci;
+import AB03.Palindrome;
 
-import java.util.ArrayList;
-import java.util.List;
-import java.util.Random;
-import java.util.Scanner;
+import java.io.IOException;
+import java.util.*;
 
 import static AB01.Game_Of_Life.*;
 
 
 public class Main {
-    public static void main(String[] args) {
-        Random random = new Random();
-        int[] arr = new int[10000];
-        for (int i = 0; i < arr.length; i++) {
-            arr[i] = random.nextInt(1000);
-        }
-        BubbleSort b = new BubbleSort();
-        Zeitmessung zeitmesser = new Zeitmessung();
-
-        int[] newArray = b.bubbleSort(arr);
-        for (int i : newArray) {
-            System.out.println(i);
-        }
-        System.out.println(zeitmesser.elapsedTime());
+    public static void main(String[] args)  {
+        Fibonacci f = new Fibonacci();
+        f.fibonacci_procedure(0,1);
     }
 }

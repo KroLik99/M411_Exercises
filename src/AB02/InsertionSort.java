@@ -41,5 +41,39 @@ int[] liste = new int[10];
     };
     InsertionSort i = new InsertionSort();
         i.insertionsort(liste);
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+        Random random = new Random();
+        int[] arr = new int[10000];
+        for (int i = 0; i < arr.length; i++) {
+            arr[i] = random.nextInt(1000);
+        }
+        BubbleSort b = new BubbleSort();
+
+        Zeitmessung zeitmesser = new Zeitmessung();
+        int[] newArray = b.bubbleSort(arr);
+        System.out.println("Zeitmesser1: " + zeitmesser.elapsedTime());
+
+        InsertionSort i = new InsertionSort();
+        Zeitmessung zeitmesser1 = new Zeitmessung();
+        i.insertionsort(arr);
+        System.out.println("Zeitmesser2: "+zeitmesser1.elapsedTime());
+
+        Zeitmessung zeitmesser2 = new Zeitmessung();
+        Arrays.sort(arr);
+        System.out.println("Zeitmesser3: "+zeitmesser2.elapsedTime());
 } */
 }
