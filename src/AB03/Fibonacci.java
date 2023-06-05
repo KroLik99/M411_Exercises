@@ -14,6 +14,9 @@ public class Fibonacci {
         System.out.println(result);
         a++;
         fibonacci_procedure(first, second);
+        }
+    public static long fibonacciRekursiv(long n) {
+        if (n == 1 || n == 2) { return 1; }
+        return fibonacciRekursiv(n - 1) + fibonacciRekursiv(n - 2); }
 
-    }
 }
