@@ -12,18 +12,18 @@ public class ArrayListVSLinkedList {
             int randomNumber = (int) (Math.random() * 1000000);
             arrayList.add(randomNumber);
             linkedList.add(randomNumber);
-            long startTime = System.currentTimeMillis();
-            int smallestArrayList = findSmallestElementArrayList(arrayList);
-            long endTime = System.currentTimeMillis();
-            System.out.println("Kleinste Zahl in ArrayList: " + smallestArrayList);
-            System.out.println("Verstrichene Zeit für ArrayList: " + (endTime - startTime) + " Millisekunden");
-            startTime = System.currentTimeMillis();
-            int smallestLinkedList = findSmallestElementLinkedList(linkedList);
-            endTime = System.currentTimeMillis();
-            System.out.println("Kleinste Zahl in LinkedList: " + smallestLinkedList);
-            System.out.println("Verstrichene Zeit für LinkedList: " + (endTime - startTime) + " Millisekunden");
-
         }
+        long startTime = System.currentTimeMillis();
+        int smallestArrayList = findSmallestElementArrayList(arrayList);
+        long endTime = System.currentTimeMillis();
+        System.out.println("Kleinste Zahl in ArrayList: " + smallestArrayList);
+        System.out.println("Verstrichene Zeit für ArrayList: " + (endTime - startTime) + " Millisekunden");
+        startTime = System.currentTimeMillis();
+        int smallestLinkedList = findSmallestElementLinkedList(linkedList);
+        endTime = System.currentTimeMillis();
+        System.out.println("Kleinste Zahl in LinkedList: " + smallestLinkedList);
+        System.out.println("Verstrichene Zeit für LinkedList: " + (endTime - startTime) + " Millisekunden");
+
 
     }
 
@@ -41,7 +41,7 @@ public class ArrayListVSLinkedList {
                 smallest = num;
             }
         }
-        return 1;
+        return smallest;
     }
 
     private static int findSmallestElementArrayList(ArrayList<Integer> arrayList) {
@@ -58,6 +58,6 @@ public class ArrayListVSLinkedList {
                 smallest = num;
             }
         }
-        return 1;
+        return smallest;
     }
 }
