@@ -63,8 +63,6 @@ public class Main {
         // Aufgabe 6 - Potenzieren mit Rekursion
         System.out.println("\n*** Aufgabe 6 - potenz ***");
         System.out.println("2⁵=" + a.potenz(2,5));      // 32
-        System.out.println("2⁴=" + a.potenz(2,4));      // 16
-        System.out.println("3⁴=" + a.potenz(3,4));      // 16
         System.out.println("2⁰=" + a.potenz(2,0));      // 1
         System.out.println("2⁽⁻²⁾=" + a.potenz(2,-2));  // 0.25    = 1/4
         System.out.println("2⁽⁻⁵⁾=" + a.potenz(2,-5));  // 0.03125 = 1/32

@@ -117,14 +117,16 @@ public class Aufgaben {
         }
 
 
-        public static float potenz(int basis, int exponent) {
+        public static double potenz(int basis, int exponent) {
             // Implementieren Sie hier die Aufgabe 6
             if (exponent == 0) {
                 return 1;
-            }
-            else {
-                int newExponent = --exponent;
-                return exponent*potenz(basis, newExponent);
+            } else if (exponent < 0) {
+                int newExponent = exponent-1;
+                return 1/(potenz(basis, newExponent));
+            } else {
+                int newExponent = exponent-1;
+                return basis*(potenz(basis, newExponent));
             }
         }
 
